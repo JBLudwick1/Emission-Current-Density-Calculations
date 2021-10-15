@@ -1,0 +1,11 @@
+Code to build lookup table.
+
+Premade 4-Dimensional lookup table using the quantum mechanical wave impedance approach with the input parameters:
+electric field magnitude [V/nm],
+Temperature [K],
+Radius of curvature [nm],
+Work function [eV],
+can be found in the COMSOL_Example folder labelled LUT_4D.mat.
+
+To build a lookup table, open Main.m and appropriately set all the controls within this file.
+For more information, see the README document.

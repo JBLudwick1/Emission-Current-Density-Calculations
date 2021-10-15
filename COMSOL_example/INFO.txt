@@ -1,0 +1,25 @@
+Example LUT implementation into COMSOL with local emission current density calculated on a random rough surface.
+
+Keep all files in same folder and run COMSOL file.
+
+MATLAB-COMSOL Livelink required.
+
+COMSOL version 5.6 recommended. However, a COMSOL java file is here if needed to recompile into earlier COMSOL version. To compile this java file into a comsol class file, install java then in command line:
+
+Windows:
+<comsol path>\bin\win32\comsolcompile -jdkroot <JDK path> <comsol java file path>\rough_surface_example.java
+
+Linux/Mac
+<comsol path>/bin/comsol compile -jdkroot <JDK path> \ <comsol java file path>/rough_surface_example.java
+
+tip #1: use "" around full file paths
+tip #2: JDK paths are the jdk folders directly in the java installation folder
+tip #3: Make sure allow external MATLAB functions is allowed in COMSOL security settings
+tip #4: After compiling a java file, a class file will be generated that can be opened in COMSOL. If this file cannot find the MATLAB functions, save the COMSOL file as a .mph file in the same folder then try again
+
+Lookup table specifications:
+max error: 10%
+Electric field magnitude range [0.5, 10] V/nm (Any field below this range is assumed to produce no current, do not exceed this range)
+Temperature range [300, 3000] K (Keep within this range)
+Radius of curvature range [20, 5000] nm (any radius above this max value is assumed to be the same as RoC = 5000 nm. Do not go below this min value.)
+Work function range [2, 6.5] eV (Keep within this range)
